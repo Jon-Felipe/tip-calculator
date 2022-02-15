@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <img src="./images/logo.svg" alt="logo" class="logo" />
+    </header>
+    <!-- header -->
+    <!-- tip calculator -->
+    <main class="tip">
+      <!-- tip calculator container -->
+      <section class="section-center tip-container">
+        <h3>bill <span class="bill-error">can't be negative or zero</span></h3>
+        <article class="bill-container">
+          <img
+            src="./images/icon-dollar.svg"
+            alt="dollar symbol"
+            class="dollar-image"
+          />
+          <input type="text" class="bill-input" placeholder="0" />
+        </article>
+        <h3>
+          number of people
+          <span class="people-error">can't be negative or zero</span>
+        </h3>
+        <article class="people-amount">
+          <img
+            src="images/icon-person.svg"
+            alt="person icon"
+            class="person-icon"
+          />
+          <input type="text" placeholder="0" class="people-input" />
+        </article>
+        <h3>select tip %</h3>
+        <article class="select-tip-container">
+          <button class="tip-amount-btn" data-tip="0.05">5%</button>
+          <button class="tip-amount-btn" data-tip="0.10">10%</button>
+          <button class="tip-amount-btn" data-tip="0.15">15%</button>
+          <button class="tip-amount-btn" data-tip="0.25">25%</button>
+          <button class="tip-amount-btn" data-tip="0.50">50%</button>
+          <input
+            type="text"
+            class="custom-tip"
+            onfocus="placeholder = ''"
+            placeholder="Custom"
+            onblur="placeholder = 'Custom' "
+          />
+        </article>
+      </section>
+      <!-- end of tip calculator container -->
+      <!-- tip total container -->
+      <section class="section-center tip-total-container">
+        <div class="tip-total">
+          <!-- tip amount -->
+          <article class="display-tip">
+            <h4>
+              tip amount <br />
+              <span>/ person</span>
+            </h4>
+            <p class="tip-amount">$0.00</p>
+          </article>
+          <!-- end of tip amount -->
+          <!-- total amount -->
+          <article class="total-amount-container">
+            <h4>
+              total <br />
+              <span>/ person</span>
+            </h4>
+            <p class="total-amount">$0.00</p>
+          </article>
+          <!-- end of total amount -->
+        </div>
+        <button type="button" class="reset-btn">reset</button>
+      </section>
+      <!-- end of tip total container -->
+    </main>
+    <!-- end of tip calculator -->
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
